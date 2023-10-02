@@ -1,0 +1,36 @@
+#! /usr/bin/env python
+"""Add Docstring here"""
+
+# For testing purposes, remove later
+from os import path
+import sys
+from matplotlib import pyplot as plt
+import numpy as np
+
+
+local = path.split(path.abspath(__file__))[0]
+
+sys.path.insert(0,path.join(local, ".."))
+
+bandMap = {"g" : 0,
+           "r" : 1,
+           "i" : 2,
+           "z" : 3}
+
+from intricate import template_tools
+
+# Add restriction on RR type and forcefully apply lowercase
+
+data_path = path.join(local, "..", "intricate", "data", "raw")
+loadStuff = template_tools.template_stack("ab", data_path)
+single_model = template_tools.single_template(loadStuff, 10891, bandMap["g"])
+x = np.arange(0,1,0.01)
+y = single_model.evaluate_in_phase(x)
+
+plt.plot(x,y)
+plt.gca().invert_yaxis()
+plt.show()
+# print(single_model.coefficients)
+# print(single_model.n_terms)
+# print(single_model.name)
+# print(single_model.period)
