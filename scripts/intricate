@@ -22,12 +22,18 @@ from intricate import template_tools
 # Add restriction on RR type and forcefully apply lowercase
 
 data_path = path.join(local, "..", "intricate", "data", "raw")
-loadStuff = template_tools.template_stack("ab", data_path)
-single_model = template_tools.single_template(loadStuff, 10891, bandMap["g"])
+loadStuff = template_tools.template_stack("ab", data_path, "fourier_RRab_DECam.npz")
+single_model = template_tools.single_template(loadStuff, 10891, bandMap["i"])
 x = np.arange(0,1,0.01)
-y = single_model.evaluate_in_phase(x)
+y1 = single_model.evaluate_in_phase(x)
 
-plt.plot(x,y)
+loadStuff2 = template_tools.template_stack("ab", data_path, "fourier_RRab_DECam_new.npz")
+single_model2 = template_tools.single_template(loadStuff2, 10891, bandMap["i"])
+y2 = single_model2.evaluate_in_phase(x)
+
+plt.plot(x,y1, label ="Dont ignore")
+plt.plot(x,y2, label = "Ignore after N band")
+plt.legend()
 plt.gca().invert_yaxis()
 plt.show()
 # print(single_model.coefficients)
