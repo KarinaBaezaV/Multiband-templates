@@ -94,6 +94,8 @@ for b in "giz":
     plt.clf()
     plt.close()
 
+# Must add uncertainties to coefficients... https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.WLS.html#statsmodels.regression.linear_model.WLS
+
 # Can we linear equations of higher order N?
 
 
