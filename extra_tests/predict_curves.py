@@ -47,7 +47,7 @@ base = pd.read_csv(path.join(local, "new_fits_ab.csv"))
 
 slopes = pd.read_csv(path.join(local, "linear_fits_ab.csv"))
 
-# First, test with curves within the dataset. Use r band as starting poing (everything is a function of r)
+# First, test with curves within the dataset. Use r band as starting point (everything is a function of r)
 choice = np.random.randint(0,len(base.index)+1)
 
 personal_info, coeffs = np.split(base.iloc[[choice]].to_numpy().flatten(), [2])
@@ -87,9 +87,11 @@ for b in "giz":
     y_slope = eval_fourier(period, f_x*period, slope_coeffs)
     f_y = eval_fourier(period, f_x*period,f_coeffs[my_info[0]])
     plt.title(f"{b}-band light-curve as a function of r-band")
-    plt.scatter(x_data, y_data, c = "k", s = 5)
-    plt.plot(f_x, f_y)
-    plt.plot(f_x, y_slope)
+    plt.scatter(x_data, y_data, c = "k", s = 5, label = "Data")
+    plt.plot(f_x, f_y, label = "Fourier fit")
+    plt.plot(f_x, y_slope, label = "Prediction")
+    plt.legend()
+    plt.gca().invert_yaxis()
     plt.show()
     plt.clf()
     plt.close()
