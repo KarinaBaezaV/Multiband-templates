@@ -3,7 +3,7 @@ We present the latest and enhanced versions of RR Lyrae templates in the griz ba
 
 # Multi-band Templates for RR Lyrae stars
 
-Example of the use of multi-bad templates in Baeza-Villagra, K et al. 2024. 
+Example of the use of sigma clipping in Baeza-Villagra, K et al. 2024. 
 All the instructions are provided in the following JuPyter notebook:
 1. Example.ipynb
    
