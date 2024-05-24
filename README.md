@@ -9,6 +9,7 @@ All the instructions are provided in the following JuPyter notebook:
 2. SigmaClippling.ipynb
 
 The work is based on the A&A paper: 
+
 Author: Karina Baeza Villagra (kbbaeza@uc.cl)
 
 
