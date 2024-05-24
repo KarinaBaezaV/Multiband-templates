@@ -5,9 +5,8 @@ We present the latest and enhanced versions of RR Lyrae templates in the griz ba
 
 Example of the use of multi-bad templates in Baeza-Villagra, K et al. 2024. 
 All the instructions are provided in the following JuPyter notebook:
-1. Apply_templates.ipynb
-2. SigmaClippling.ipynb
-
+1. Example.ipynb
+   
 The work is based on the A&A paper: 
 
 Author: Karina Baeza Villagra (kbbaeza@uc.cl)
