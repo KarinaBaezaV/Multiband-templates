@@ -9,11 +9,6 @@ All the instructions are provided in the following JuPyter notebook:
 2. SigmaClippling.ipynb
 
 The work is based on the A&A paper: 
-
-# Installation
-This package is not installed via pip, but by downloading the files to a local folder. 
-Note that the example require Jupyter notebook. 
-
 Author: Karina Baeza Villagra (kbbaeza@uc.cl)
 
 
