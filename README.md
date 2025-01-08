@@ -7,7 +7,9 @@ Example of the use of sigma clipping in Baeza-Villagra, K et al. 2024.
 All the instructions are provided in the following JuPyter notebook:
 1. Example.ipynb
    
-The work is based on the A&A paper: 
+The work is based on the A&A paper: High-cadence stellar variability studies of RR Lyrae stars with DECam: New multi-band templates
+
+https://arxiv.org/abs/2501.03813
 
 Author: Karina Baeza Villagra (kbbaeza@uc.cl)
 
